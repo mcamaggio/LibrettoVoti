@@ -1,10 +1,8 @@
 package it.polito.tdp.librettovoti.model;
 
 public class Voto {
-
-	private String nome;
-	private int punti;
-//	private String dataEsame;
+	private String nome ;
+	private int punti ;
 	
 	public Voto(String nome, int punti) {
 		super();
@@ -23,9 +21,10 @@ public class Voto {
 	public void setPunti(int punti) {
 		this.punti = punti;
 	}
+	
 	@Override
 	public String toString() {
-		return nome + ": " + punti ;
+		return nome+" : "+ punti;
 	}
 	@Override
 	public int hashCode() {
@@ -56,13 +55,5 @@ public class Voto {
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+		
 }
