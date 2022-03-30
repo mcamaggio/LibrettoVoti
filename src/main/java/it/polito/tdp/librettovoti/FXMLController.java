@@ -72,6 +72,13 @@ public class FXMLController {
     
     public void setModel(Libretto model) {
 		this.model = model;
+		
+		List<Voto> voti = model.getVoti();
+		txtVoti.clear();
+		txtVoti.appendText("Hai superato " + voti.size() + " esami:\n");
+		for (Voto v : voti) {
+			txtVoti.appendText(v.toString() + "\n");
+		}
 	}
 
     @FXML
@@ -80,6 +87,12 @@ public class FXMLController {
         assert txtNome != null : "fx:id=\"txtNome\" was not injected: check your FXML file 'Scene.fxml'.";
         assert txtStatus != null : "fx:id=\"txtStatus\" was not injected: check your FXML file 'Scene.fxml'.";
         assert txtVoti != null : "fx:id=\"txtVoti\" was not injected: check your FXML file 'Scene.fxml'.";
+        
+        cmbPunti.getItems().clear();
+        for(int p = 18; p <= 30; p++) {
+        	cmbPunti.getItems().add(p);
+        }
+        
 
     }
 
